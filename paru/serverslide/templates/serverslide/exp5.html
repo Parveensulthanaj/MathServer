@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>serverslide</title>
+        <style>
+            body{
+                background-color:yellow;
+            }
+            h1{
+                background-color: black;
+                color: cyan;
+            }
+            form{
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">THE LAMP'S POWER</h1>
+        <form align="center"method="post">
+            {% csrf_token %}
+            Intensity <input name="I" value="{{i}}">
+            <br>
+            <br>
+            Resistance<input name="R" value="{{r}}">
+            <br>
+            <br>
+            <input type="submit" value="calculate">
+            <br>
+            <br>
+            Power<input name="power"value={{power}}>
+        </form>
+    </body>
+</html>
